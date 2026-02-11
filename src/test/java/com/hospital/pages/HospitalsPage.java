@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class HospitalsPage {
 
     private WebDriver driver;
+    //yfv
 
     public HospitalsPage(WebDriver driver) {
         this.driver = driver;
