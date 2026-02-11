@@ -21,4 +21,8 @@ public class HospitalsPage {
     public boolean isSearchBoxPresent() {
         return driver.findElements(searchBox).size() > 0;
     }
+
+    public boolean isHospitalsPageDisplayed(){
+        return isSearchBoxPresent();
+    }
 }
