@@ -1,0 +1,202 @@
+2026-02-12 23:15:38 [main] INFO  TestListener - ===== TEST SUITE STARTED: Project =====
+2026-02-12 23:15:38 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-12 23:15:38 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-12 23:15:38 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-12 23:15:43 [main] INFO  BaseTest - Waits applied successfully
+2026-02-12 23:15:45 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-12 23:15:45 [main] INFO  TestListener - START TEST: fetch10Open24x7HospitalDetails_AndSaveToExcel
+2026-02-12 23:19:20 [main] INFO  TestListener - ===== TEST SUITE STARTED: Project =====
+2026-02-12 23:19:20 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-12 23:19:20 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-12 23:19:20 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-12 23:19:23 [main] INFO  BaseTest - Waits applied successfully
+2026-02-12 23:19:24 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-12 23:19:24 [main] INFO  TestListener - START TEST: fetch10Open24x7HospitalDetails_AndSaveToExcel
+2026-02-12 23:19:34 [main] ERROR TestListener - FAIL TEST: fetch10Open24x7HospitalDetails_AndSaveToExcel
+java.lang.AssertionError: Could not fetch 10 Open 24x7 hospital URLs. Found: 2 expected [10] but found [2]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:132) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1419) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertEquals(Assert.java:1383) ~[testng-7.10.2.jar:7.10.2]
+	at com.hospital.tests.HospitalTest.fetch10Open24x7HospitalDetails_AndSaveToExcel(HospitalTest.java:33) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-02-12 23:19:34 [main] INFO  BaseTest - Screenshot saved at: target\screenshots\fetch10Open24x7HospitalDetails_AndSaveToExcel_1770918574375.png
+2026-02-12 23:19:34 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-12 23:19:37 [main] INFO  BaseTest - Browser closed successfully
+2026-02-12 23:19:37 [main] INFO  TestListener - ===== TEST SUITE FINISHED: Project =====
+2026-02-12 23:20:06 [main] INFO  TestListener - ===== TEST SUITE STARTED: Project =====
+2026-02-12 23:20:06 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-12 23:20:06 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-12 23:20:06 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-12 23:20:08 [main] INFO  BaseTest - Waits applied successfully
+2026-02-12 23:20:11 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-12 23:20:11 [main] INFO  TestListener - START TEST: fetch10Open24x7HospitalDetails_AndSaveToExcel
+2026-02-12 23:20:47 [main] INFO  TestListener - PASS TEST: fetch10Open24x7HospitalDetails_AndSaveToExcel
+2026-02-12 23:20:47 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-12 23:20:48 [main] INFO  BaseTest - Browser closed successfully
+2026-02-12 23:20:48 [main] INFO  TestListener - ===== TEST SUITE FINISHED: Project =====
+2026-02-12 23:49:51 [main] INFO  TestListener - ===== TEST SUITE STARTED: Project =====
+2026-02-12 23:49:51 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-12 23:49:51 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-12 23:49:51 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-12 23:49:55 [main] INFO  BaseTest - Waits applied successfully
+2026-02-12 23:49:57 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-12 23:49:57 [main] INFO  TestListener - START TEST: printTopCitiesFromDiagnostics
+2026-02-12 23:50:10 [main] ERROR TestListener - FAIL TEST: printTopCitiesFromDiagnostics
+java.lang.AssertionError: No Top Cities captured from Diagnostics popup! expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.failNotEquals(Assert.java:1578) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.Assert.assertTrue(Assert.java:57) ~[testng-7.10.2.jar:7.10.2]
+	at com.hospital.tests.DiagnosticsTest.printTopCitiesFromDiagnostics(DiagnosticsTest.java:30) ~[test-classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+2026-02-12 23:50:10 [main] INFO  BaseTest - Screenshot saved at: target\screenshots\printTopCitiesFromDiagnostics_1770920410526.png
+2026-02-12 23:50:10 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-12 23:50:11 [main] INFO  BaseTest - Browser closed successfully
+2026-02-12 23:50:11 [main] INFO  TestListener - ===== TEST SUITE FINISHED: Project =====
+2026-02-12 23:56:37 [main] INFO  TestListener - ===== TEST SUITE STARTED: Project =====
+2026-02-12 23:56:37 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-12 23:56:37 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-12 23:56:37 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-12 23:56:40 [main] INFO  BaseTest - Waits applied successfully
+2026-02-12 23:56:41 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-12 23:56:41 [main] INFO  TestListener - START TEST: printTopCitiesFromDiagnostics
+2026-02-12 23:56:44 [main] INFO  TestListener - PASS TEST: printTopCitiesFromDiagnostics
+2026-02-12 23:56:44 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-12 23:56:44 [main] INFO  BaseTest - Browser closed successfully
+2026-02-12 23:56:44 [main] INFO  TestListener - ===== TEST SUITE FINISHED: Project =====
+2026-02-13 00:13:57 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 00:13:57 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 00:13:57 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 00:14:00 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 00:14:03 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 00:14:24 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 00:14:25 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 00:14:55 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 00:14:55 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 00:14:55 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 00:14:58 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 00:15:00 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 00:15:18 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 00:15:19 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 00:33:31 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 00:33:31 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 00:33:31 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 00:33:35 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 00:33:42 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 00:33:56 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 00:33:57 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 00:35:12 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 00:35:12 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 00:35:12 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 00:35:15 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 00:35:16 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 00:35:22 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 00:35:23 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 00:48:02 [main] INFO  TestListener - ===== TEST SUITE STARTED: All Tests =====
+2026-02-13 00:48:03 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 00:48:03 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 00:48:03 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 00:48:06 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 00:48:08 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 00:48:08 [main] INFO  TestListener - START TEST: fetch10Open24x7HospitalDetails_AndSaveToExcel
+2026-02-13 00:48:45 [main] INFO  TestListener - PASS TEST: fetch10Open24x7HospitalDetails_AndSaveToExcel
+2026-02-13 00:48:45 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 00:48:46 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 00:48:46 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 00:48:46 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 00:48:46 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 00:48:47 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 00:48:49 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 00:48:49 [main] INFO  TestListener - START TEST: printTopCitiesFromDiagnostics
+2026-02-13 00:48:52 [main] INFO  TestListener - PASS TEST: printTopCitiesFromDiagnostics
+2026-02-13 00:48:52 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 00:48:53 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 00:48:53 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 00:48:53 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 00:48:53 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 00:48:54 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 00:48:56 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 00:48:56 [main] INFO  TestListener - START TEST: captureWarningMessageForInvalidCorporateWellnessForm
+2026-02-13 00:48:59 [main] INFO  TestListener - PASS TEST: captureWarningMessageForInvalidCorporateWellnessForm
+2026-02-13 00:48:59 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 00:48:59 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 00:48:59 [main] INFO  TestListener - ===== TEST SUITE FINISHED: All Tests =====
+2026-02-13 01:08:58 [main] INFO  TestListener - ===== TEST SUITE STARTED: All Tests =====
+2026-02-13 01:08:58 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 01:08:58 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 01:08:58 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 01:09:02 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 01:09:04 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 01:09:04 [main] INFO  TestListener - START TEST: fetch10Open24x7HospitalDetails_AndSaveToExcel
+2026-02-13 01:09:42 [main] INFO  TestListener - PASS TEST: fetch10Open24x7HospitalDetails_AndSaveToExcel
+2026-02-13 01:09:42 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 01:09:43 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 01:09:43 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 01:09:43 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 01:09:43 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 01:09:45 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 01:09:47 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 01:09:47 [main] INFO  TestListener - START TEST: printTopCitiesFromDiagnostics
+2026-02-13 01:10:04 [main] INFO  TestListener - PASS TEST: printTopCitiesFromDiagnostics
+2026-02-13 01:10:04 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 01:10:04 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 01:10:04 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-13 01:10:04 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-13 01:10:04 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-13 01:10:06 [main] INFO  BaseTest - Waits applied successfully
+2026-02-13 01:10:07 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-13 01:10:07 [main] INFO  TestListener - START TEST: captureWarningMessageForInvalidCorporateWellnessForm
+2026-02-13 01:10:12 [main] INFO  TestListener - PASS TEST: captureWarningMessageForInvalidCorporateWellnessForm
+2026-02-13 01:10:12 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-13 01:10:12 [main] INFO  BaseTest - Browser closed successfully
+2026-02-13 01:10:12 [main] INFO  TestListener - ===== TEST SUITE FINISHED: All Tests =====
