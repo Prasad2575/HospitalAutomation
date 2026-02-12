@@ -13,5 +13,15 @@ public class SmokeTest extends BaseTest {
 
         System.out.println("Page Title: " + homePage.getPageTitle());
         Assert.assertTrue(homePage.isHomePageDisplayed(), "Home page is not displayed!");
+
+
+    }
+    @Test
+    public void searchHospitalsInBangalore() {
+
+        HomePage homePage = new HomePage(driver);
+
+        homePage.selectCity("Bangalore");
+        homePage.searchHospital();
     }
 }
