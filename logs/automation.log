@@ -464,3 +464,68 @@ java.lang.AssertionError: No Top Cities captured from Diagnostics popup! expecte
 2026-02-15 17:28:57 [main] INFO  BaseTest - ===== Test Teardown Started =====
 2026-02-15 17:28:58 [main] INFO  BaseTest - Browser closed successfully
 2026-02-15 17:28:58 [main] INFO  TestListener - ===== TEST SUITE FINISHED: All Tests =====
+2026-02-16 21:38:51 [main] INFO  TestListener - ===== TEST SUITE STARTED: All Tests =====
+2026-02-16 21:38:51 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-16 21:38:51 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-16 21:38:51 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-16 21:38:59 [main] INFO  BaseTest - Waits applied successfully
+2026-02-16 21:39:01 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-16 21:39:01 [main] INFO  TestListener - START TEST: fetchOpen24x7HospitalDetails_AndSaveToExcel
+2026-02-16 21:39:35 [main] INFO  TestListener - ===== TEST SUITE STARTED: All Tests =====
+2026-02-16 21:39:35 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-16 21:39:35 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-16 21:39:35 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-16 21:39:38 [main] INFO  BaseTest - Waits applied successfully
+2026-02-16 21:39:39 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-16 21:39:39 [main] INFO  TestListener - START TEST: fetchOpen24x7HospitalDetails_AndSaveToExcel
+2026-02-16 21:40:17 [main] INFO  TestListener - PASS TEST: fetchOpen24x7HospitalDetails_AndSaveToExcel
+2026-02-16 21:40:17 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-16 21:40:18 [main] INFO  BaseTest - Browser closed successfully
+2026-02-16 21:40:18 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-16 21:40:18 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-16 21:40:18 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-16 21:40:20 [main] INFO  BaseTest - Waits applied successfully
+2026-02-16 21:40:22 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-16 21:40:22 [main] INFO  TestListener - START TEST: printTopCitiesFromDiagnostics
+2026-02-16 21:40:25 [main] INFO  TestListener - PASS TEST: printTopCitiesFromDiagnostics
+2026-02-16 21:40:25 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-16 21:40:25 [main] INFO  BaseTest - Browser closed successfully
+2026-02-16 21:40:25 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-16 21:40:25 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-16 21:40:25 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-16 21:40:26 [main] INFO  BaseTest - Waits applied successfully
+2026-02-16 21:40:28 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-16 21:40:28 [main] INFO  TestListener - START TEST: captureWarningMessageForInvalidCorporateWellnessForm
+2026-02-16 21:40:31 [main] INFO  TestListener - PASS TEST: captureWarningMessageForInvalidCorporateWellnessForm
+2026-02-16 21:40:31 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-16 21:40:31 [main] INFO  BaseTest - Browser closed successfully
+2026-02-16 21:40:31 [main] INFO  TestListener - ===== TEST SUITE FINISHED: All Tests =====
+2026-02-16 21:43:36 [main] INFO  TestListener - ===== TEST SUITE STARTED: All Tests =====
+2026-02-16 21:43:36 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-16 21:43:36 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-16 21:43:36 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-16 21:43:39 [main] INFO  BaseTest - Waits applied successfully
+2026-02-16 21:43:40 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-16 21:43:40 [main] INFO  TestListener - START TEST: fetchOpen24x7HospitalDetails_AndSaveToExcel
+2026-02-16 21:44:20 [main] INFO  TestListener - PASS TEST: fetchOpen24x7HospitalDetails_AndSaveToExcel
+2026-02-16 21:44:20 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-16 21:44:20 [main] INFO  BaseTest - Browser closed successfully
+2026-02-16 21:44:20 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-16 21:44:20 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-16 21:44:20 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-16 21:44:21 [main] INFO  BaseTest - Waits applied successfully
+2026-02-16 21:44:23 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-16 21:44:23 [main] INFO  TestListener - START TEST: printTopCitiesFromDiagnostics
+2026-02-16 21:44:25 [main] INFO  TestListener - PASS TEST: printTopCitiesFromDiagnostics
+2026-02-16 21:44:25 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-16 21:44:26 [main] INFO  BaseTest - Browser closed successfully
+2026-02-16 21:44:26 [main] INFO  BaseTest - ===== Test Setup Started =====
+2026-02-16 21:44:26 [main] INFO  BaseTest - Configuration file loaded successfully
+2026-02-16 21:44:26 [main] INFO  BaseTest - Launching browser: chrome
+2026-02-16 21:44:27 [main] INFO  BaseTest - Waits applied successfully
+2026-02-16 21:44:28 [main] INFO  BaseTest - Application launched: https://www.practo.com
+2026-02-16 21:44:28 [main] INFO  TestListener - START TEST: captureWarningMessageForInvalidCorporateWellnessForm
+2026-02-16 21:44:32 [main] INFO  TestListener - PASS TEST: captureWarningMessageForInvalidCorporateWellnessForm
+2026-02-16 21:44:32 [main] INFO  BaseTest - ===== Test Teardown Started =====
+2026-02-16 21:44:32 [main] INFO  BaseTest - Browser closed successfully
+2026-02-16 21:44:32 [main] INFO  TestListener - ===== TEST SUITE FINISHED: All Tests =====
