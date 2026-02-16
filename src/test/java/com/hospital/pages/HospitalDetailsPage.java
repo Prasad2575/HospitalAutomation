@@ -1,11 +1,12 @@
 package com.hospital.pages;
 
-import java.time.Duration;
-import java.util.List;
-
+import com.hospital.model.HospitalInfo;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.List;
 
 public class HospitalDetailsPage {
 
@@ -14,100 +15,136 @@ public class HospitalDetailsPage {
 
     public HospitalDetailsPage(WebDriver driver) {
         this.driver = driver;
-        // ✅ Reduced wait from 15s to 8s to make execution faster
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(12));
+    }
+
+    // ✅ One method to fetch everything
+    public HospitalInfo fetchHospitalInfo(String url, int sNo) {
+        String name = getHospitalName();
+        int beds = getBedsCount();
+        double rating = getRating();
+        String phone = getPhoneNumber();
+        return new HospitalInfo(sNo, name, beds, rating, phone, url);
     }
 
     // ✅ Hospital Name
     public String getHospitalName() {
         By name = By.xpath("//h1[contains(@class,'c-profile__title') or self::h1]");
-
-        // quick try first
-        List<WebElement> els = driver.findElements(name);
-        if (!els.isEmpty()) return els.get(0).getText().trim();
-
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(name)).getText().trim();
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(name)).getText().trim();
+        } catch (Exception e) {
+            return "NOT_FOUND";
+        }
     }
 
-    // ✅ Beds Count (data-qa-id="bed_count")
+    // ✅ Beds Count
     public int getBedsCount() {
         By beds = By.xpath("//*[@data-qa-id='bed_count']");
-
-        // quick try first
-        List<WebElement> els = driver.findElements(beds);
-        String text;
-        if (!els.isEmpty()) {
-            text = els.get(0).getText().trim();
-        } else {
-            text = wait.until(ExpectedConditions.visibilityOfElementLocated(beds)).getText().trim();
-        }
-
-        String numberOnly = text.replaceAll("[^0-9]", "");
-        return numberOnly.isEmpty() ? -1 : Integer.parseInt(numberOnly);
-    }
-
-    // ✅ Rating (use exact value span first, else star_rating title)
-    public double getRating() {
-
-        By ratingValue = By.xpath("//span[contains(@class,'common__star-rating__value')]");
-
-        // quick try first
-        List<WebElement> vals = driver.findElements(ratingValue);
-        if (!vals.isEmpty()) {
-            String txt = vals.get(0).getText().trim();
-            if (!txt.isEmpty()) return Double.parseDouble(txt);
-        }
-
-        // wait try
         try {
-            String txt = wait.until(ExpectedConditions.visibilityOfElementLocated(ratingValue)).getText().trim();
-            if (!txt.isEmpty()) return Double.parseDouble(txt);
-        } catch (Exception ignored) {}
-
-        // fallback: title attribute
-        try {
-            By ratingDiv = By.xpath("//*[@data-qa-id='star_rating']");
-            WebElement el = driver.findElements(ratingDiv).isEmpty()
-                    ? wait.until(ExpectedConditions.visibilityOfElementLocated(ratingDiv))
-                    : driver.findElements(ratingDiv).get(0);
-
-            String title = el.getAttribute("title");
-            if (title != null && !title.trim().isEmpty()) {
-                return Double.parseDouble(title.trim());
+            String text = getTextIfPresent(beds);
+            if (text.isEmpty()) {
+                text = wait.until(ExpectedConditions.visibilityOfElementLocated(beds)).getText().trim();
             }
-        } catch (Exception ignored) {}
-
-        return -1;
+            String numberOnly = text.replaceAll("[^0-9]", "");
+            return numberOnly.isEmpty() ? -1 : Integer.parseInt(numberOnly);
+        } catch (Exception e) {
+            return -1;
+        }
     }
 
-    // ✅ Phone Number (fast)
-    public String getPhoneNumber() {
-
-        By phone = By.xpath("//*[@data-qa-id='phone_number']");
-
-        // 1) Quick check (no wait)
-        List<WebElement> phoneEls = driver.findElements(phone);
-        if (!phoneEls.isEmpty()) {
-            String number = phoneEls.get(0).getText().trim();
-            if (!number.isEmpty()) return number;
-        }
-
-        // 2) If not visible, click Call Now then wait
+    // ✅ Rating
+    public double getRating() {
+        By ratingValue = By.xpath("//span[contains(@class,'common__star-rating__value')]");
         try {
-            By callBtn = By.xpath("//button[@data-qa-id='call_button']");
-            List<WebElement> callBtns = driver.findElements(callBtn);
+            String txt = getTextIfPresent(ratingValue);
+            if (txt.isEmpty()) {
+                txt = wait.until(ExpectedConditions.visibilityOfElementLocated(ratingValue)).getText().trim();
+            }
+            return txt.isEmpty() ? -1 : Double.parseDouble(txt);
+        } catch (Exception e) {
+            return -1;
+        }
+    }
 
-            if (!callBtns.isEmpty()) {
-                callBtns.get(0).click();
+    // ✅ Phone Number (tries direct first, else clicks Call Now)
+    public String getPhoneNumber() {
+        By phone = By.xpath("//*[@data-qa-id='phone_number']");
+        By callBtn = By.xpath("//button[@data-qa-id='call_button']");
+
+        // 1) If already visible and text present
+        String existing = getTextIfPresent(phone);
+        if (!existing.isEmpty()) return existing;
+
+        // 2) Click Call Now (if present)
+        try {
+            if (!driver.findElements(callBtn).isEmpty()) {
+                driver.findElements(callBtn).get(0).click();
             } else {
                 wait.until(ExpectedConditions.elementToBeClickable(callBtn)).click();
             }
-
-            String number = wait.until(ExpectedConditions.visibilityOfElementLocated(phone)).getText().trim();
-            if (!number.isEmpty()) return number;
-
         } catch (Exception ignored) {}
 
-        return "NOT_FOUND";
+        // 3) Wait for phone non-empty
+        try {
+            wait.until(d -> {
+                List<WebElement> els = d.findElements(phone);
+                if (els.isEmpty()) return false;
+                String t = els.get(0).getText().trim();
+                return !t.isEmpty();
+            });
+            return driver.findElements(phone).get(0).getText().trim();
+        } catch (Exception e) {
+            return "NOT_FOUND";
+        }
+    }
+
+    // ✅ Ensure phone is visible AND has text (for screenshot accuracy)
+    public void ensurePhoneNumberVisible() {
+        By phone = By.xpath("//*[@data-qa-id='phone_number']");
+        By callBtn = By.xpath("//button[@data-qa-id='call_button']");
+
+        try {
+            // If phone not visible, click Call Now
+            if (driver.findElements(phone).isEmpty()) {
+                if (!driver.findElements(callBtn).isEmpty()) {
+                    driver.findElements(callBtn).get(0).click();
+                } else {
+                    wait.until(ExpectedConditions.elementToBeClickable(callBtn)).click();
+                }
+            }
+
+            // Wait until phone has NON-EMPTY text
+            wait.until(d -> {
+                List<WebElement> els = d.findElements(phone);
+                if (els.isEmpty()) return false;
+                String txt = els.get(0).getText().trim();
+                return !txt.isEmpty();
+            });
+
+        } catch (Exception ignored) {}
+    }
+
+    // ✅ Scroll phone into center so it appears in screenshot
+    public void scrollToPhoneNumber() {
+        By phone = By.xpath("//*[@data-qa-id='phone_number']");
+        try {
+            WebElement phoneEl = wait.until(ExpectedConditions.visibilityOfElementLocated(phone));
+            ((JavascriptExecutor) driver).executeScript(
+                    "arguments[0].scrollIntoView({block:'center'});", phoneEl
+            );
+            Thread.sleep(400);
+        } catch (Exception ignored) {}
+    }
+
+    // ---------- helpers ----------
+    private String getTextIfPresent(By locator) {
+        try {
+            List<WebElement> els = driver.findElements(locator);
+            if (!els.isEmpty()) {
+                String txt = els.get(0).getText();
+                return txt == null ? "" : txt.trim();
+            }
+        } catch (Exception ignored) {}
+        return "";
     }
 }

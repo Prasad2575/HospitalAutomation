@@ -1,14 +1,35 @@
 package com.hospital.utils;
 
+import com.hospital.model.HospitalInfo;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.FileOutputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ExcelUtil {
+
+    // ✅ NEW: Create rows automatically (no row creation in test)
+    public static List<String[]> buildHospitalRows(List<HospitalInfo> hospitals) {
+
+        List<String[]> rows = new ArrayList<>();
+        rows.add(new String[]{"S.No", "Hospital Name", "Beds", "Rating", "Phone", "URL"});
+
+        for (HospitalInfo h : hospitals) {
+            rows.add(new String[]{
+                    String.valueOf(h.getsNo()),
+                    h.getName(),
+                    String.valueOf(h.getBeds()),
+                    String.valueOf(h.getRating()),
+                    h.getPhone(),
+                    h.getUrl()
+            });
+        }
+        return rows;
+    }
 
     public static void writeHospitalData(String filePath, String sheetName, List<String[]> rows) {
         try (Workbook workbook = new XSSFWorkbook()) {
@@ -31,7 +52,7 @@ public class ExcelUtil {
                     Cell cell = row.createCell(c);
                     cell.setCellValue(cols[c]);
 
-                    if (r == 0) { // header row
+                    if (r == 0) {
                         cell.setCellStyle(headerStyle);
                     }
                 }
